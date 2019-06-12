@@ -22,7 +22,6 @@ module.exports = {
           }
         ]
       },
-
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
@@ -50,5 +49,10 @@ module.exports = {
       title: 'tv series',
       filename: 'index.html'
     })
-  ]
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000
+  }
 };
